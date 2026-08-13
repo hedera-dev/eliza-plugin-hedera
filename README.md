@@ -105,8 +105,8 @@ The plugin loads into the Eliza agent. You can now use natural language to perfo
 
 ### Required environment variables
 - HEDERA_PRIVATE_KEY — Your Hedera account private key (DER/HEX; ED25519 or ECDSA)
-- HEDERA_ACCOUNT_ID — Your Hedera account ID (e.g. 0.0.5393196)
-- OPENAI_API_KEY — If using OpenAI; otherwise configure your chosen model provider (e.g. Ollama) via its plugin
+- HEDERA_ACCOUNT_ID — Your Hedera account ID (e.g., 0.0.5393196)
+- OPENAI_API_KEY — If using OpenAI; otherwise configure your chosen model provider (e.g., Ollama) via its plugin
 
 ## Example prompts
 
