@@ -139,7 +139,7 @@ Note: ElizaOS agents typically execute tools immediately (no human‑in‑the‑
 Before trusting changes to this plugin or a local fork, you can run a static preflight scan in an isolated environment:
 
 ```bash
-uvx --from hol-guard plugin-scanner verify .
+uvx --from hol-guard plugin-scanner scan .
 ```
 
 This does not add HOL Guard to the plugin dependency graph and does not require executing the plugin to inspect it. Treat a clean scan as one review signal, not a replacement for source review, testnet testing, least privilege, or human review of high-risk actions.
