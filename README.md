@@ -105,8 +105,8 @@ The plugin loads into the Eliza agent. You can now use natural language to perfo
 
 ### Required environment variables
 - HEDERA_PRIVATE_KEY — Your Hedera account private key (DER/HEX; ED25519 or ECDSA)
-- HEDERA_ACCOUNT_ID — Your Hedera account ID (e.g., 0.0.5393196)
-- OPENAI_API_KEY — If using OpenAI; otherwise configure your chosen model provider (e.g., Ollama) via its plugin
+- HEDERA_ACCOUNT_ID — Your Hedera account ID (e.g. 0.0.5393196)
+- OPENAI_API_KEY — If using OpenAI; otherwise configure your chosen model provider (e.g. Ollama) via its plugin
 
 ## Example prompts
 
@@ -133,6 +133,16 @@ Note: ElizaOS agents typically execute tools immediately (no human‑in‑the‑
 - Scope tool permissions and validate inputs in prompts where possible.
 - Store secrets in environment variables; never commit keys.
 - Consider human‑in‑the‑loop review for high‑risk actions in production.
+
+### Optional preflight plugin scan
+
+Before trusting changes to this plugin or a local fork, you can run a static preflight scan in an isolated environment:
+
+```bash
+uvx --from hol-guard plugin-scanner verify .
+```
+
+This does not add HOL Guard to the plugin dependency graph and does not require executing the plugin to inspect it. Treat a clean scan as one review signal, not a replacement for source review, testnet testing, least privilege, or human review of high-risk actions.
 
 ## Developer notes
 
