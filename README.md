@@ -136,7 +136,7 @@ Note: ElizaOS agents typically execute tools immediately (no human‑in‑the‑
 
 ### Optional preflight plugin scan
 
-Before trusting changes to this plugin or a local fork, you can run a static preflight scan in an isolated environment:
+Before trusting changes to this plugin or a local fork, you can run a static preflight scan with [HOL Guard](https://hol.org/guard/security) in an isolated environment:
 
 ```bash
 uvx --from hol-guard plugin-scanner scan .
